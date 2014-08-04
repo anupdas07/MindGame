@@ -16,12 +16,6 @@
 {
     // Override point for customization after application launch.
     
-    dispatch_queue_t backgroundQueue = dispatch_queue_create("com.uhc.appmessage.dbLoaderQueue", NULL);
-    dispatch_async(backgroundQueue, ^(void) {
-        MGImageHandler *handler = [[MGImageHandler alloc] init];
-        [handler deleteDownloadedCacheDirectory];
-        
-    });
     
     MGViewController *vc = [[MGViewController alloc] initWithNibName:@"MGViewController" bundle:[NSBundle mainBundle]];
     self.navController = [[UINavigationController alloc] initWithRootViewController:vc];
